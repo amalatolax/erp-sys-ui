@@ -53,7 +53,7 @@ const LoginPage: React.FC = () => {
                 {/* Right Section */}
                 <div className="flex flex-col justify-center w-full lg:w-1/2 p-8 sm:p-12">
                     <div className="max-w-md mx-auto w-full">
-                        <h2 className="text-3xl font-bold text-gray-900 mb-2">
+                        <h2 className="text-2xl font-semibold tracking-tight mb-2">
                             Welcome Back
                         </h2>
                         <p className="text-gray-600 mb-8 text-sm">
@@ -113,21 +113,21 @@ const LoginPage: React.FC = () => {
                         </form>
 
                         {/* Divider */}
-                        <div className="my-6 flex items-center justify-center text-gray-400">
+                        {/* <div className="my-6 flex items-center justify-center text-gray-400">
                             <div className="h-px w-full bg-gray-200"></div>
                             <span className="px-3 text-sm">or</span>
                             <div className="h-px w-full bg-gray-200"></div>
-                        </div>
+                        </div> */}
 
                         {/* Microsoft Login */}
-                        <button className="w-full flex items-center justify-center gap-2 border border-gray-300 rounded-xl py-2.5 hover:bg-gray-50 transition-all font-medium text-gray-700">
+                        {/* <button className="w-full flex items-center justify-center gap-2 border border-gray-300 rounded-xl py-2.5 hover:bg-gray-50 transition-all font-medium text-gray-700">
                             <img
                                 src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg"
                                 alt="Microsoft"
                                 className="w-5 h-5"
                             />
                             Sign in with Microsoft 365
-                        </button>
+                        </button> */}
 
                         {/* Footer */}
                         <p className="text-xs text-center text-gray-500 mt-8">
