@@ -5,6 +5,8 @@ import EmployeeRoleChart from "../../components/charts/EmployeeRoleChart";
 import DepartmentChart from "../../components/charts/DepartmentChart";
 import AttendanceChart from "../../components/charts/AttendanceChart";
 import StatsCards from "../../components/Reusable/StatsCard";
+import Spinner from "../../components/Reusable/Spinner";
+import { useState } from "react";
 
 const Dashboard = () => {
   const { employees, employeesByRole, employeesByDepartment } = useEmployees();
@@ -53,6 +55,16 @@ const Dashboard = () => {
       iconColor: "text-cyan-600",
     },
   ];
+
+  const [loading, setLoading] = useState<boolean>(false)
+
+  if (loading) {
+    return (
+      <div>
+        <Spinner />
+      </div>
+    );
+  }
 
   return (
     <div className="space-y-6">
