@@ -5,7 +5,7 @@ export const dummyEmployees: Employee[] = [
     id: "EMP001",
     name: "Sarah Johnson",
     email: "sarah.j@company.com",
-    phone: "+1 234-567-8901",
+    phone: "+1 234-567-890",
     role: "Admin Staff",
     gender: "Female",
     department: "Engineering",
