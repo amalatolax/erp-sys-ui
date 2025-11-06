@@ -7,6 +7,8 @@ import AttendanceChart from "../../components/charts/AttendanceChart";
 import StatsCards from "../../components/Reusable/StatsCard";
 import Spinner from "../../components/Reusable/Spinner";
 import { useState } from "react";
+import NotificationCard from "../../components/Reusable/NotificationCard";
+import ERPAnalyticsChart from "../../components/Reusable/ERPAnalysisChart";
 
 const Dashboard = () => {
   const { employees, employeesByRole, employeesByDepartment } = useEmployees();
@@ -56,7 +58,7 @@ const Dashboard = () => {
     },
   ];
 
-  const [loading, setLoading] = useState<boolean>(false)
+  const [loading, __setLoading] = useState<boolean>(false);
 
   if (loading) {
     return (
@@ -68,14 +70,13 @@ const Dashboard = () => {
 
   return (
     <div className="space-y-6">
-      <div>
-        <h1 className="text-3xl font-bold text-gray-900">Dashboard</h1>
-        <p className="text-gray-600 mt-1">
-          Welcome back! Here's your HRM overview
-        </p>
-      </div>
+      {/* <QuickAccess /> */}
 
       <StatsCards data={statsData} />
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <ERPAnalyticsChart />
+        <NotificationCard />
+      </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <EmployeeRoleChart data={employeesByRole} />
