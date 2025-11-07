@@ -1,6 +1,9 @@
 import { IconType } from "react-icons";
 
-export interface ChildrenType { id: string, name: string, path: string }
+export interface SubSubChildrenType { id: string, name: string, path: string, }
+export interface SubChildrenType { id: string, name: string, path: string, children?: SubSubChildrenType[] }
+
+export interface ChildrenType { id: string, name: string, path: string, children?: SubChildrenType[] }
 
 export interface NavigationItem {
   id: string;

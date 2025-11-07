@@ -1,6 +1,5 @@
 import { useCallback, useMemo, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { NavigationItem } from "../types";
 import { LuLayoutDashboard } from "react-icons/lu";
 import { MainRoutes } from "../data/route.data";
 import { IoPeopleCircle } from "react-icons/io5";
@@ -10,6 +9,7 @@ import { SiCashapp } from "react-icons/si";
 import { MdAccountCircle } from "react-icons/md";
 import { TiChartLine } from "react-icons/ti";
 import { MdCoPresent } from "react-icons/md";
+import { NavigationItem } from "../types";
 
 const useSidebar = () => {
   const navigate = useNavigate();
@@ -35,6 +35,30 @@ const useSidebar = () => {
             id: "generalStoresHO",
             name: "General Stores - HO",
             path: MainRoutes.employees,
+            children: [
+              {
+                id: "MISEstate",
+                name: "MIS - Estate",
+                path: MainRoutes.employees,
+                children: [
+                  {
+                    id: "MISEstate",
+                    name: "MIS - Estate",
+                    path: MainRoutes.employees,
+                  },
+                  {
+                    id: "headOfficeMIS/DashBoardHO",
+                    name: "Head Office MIS/ Dash Board - HO",
+                    path: "/employees/attendance",
+                  },
+                ],
+              },
+              {
+                id: "headOfficeMIS/DashBoardHO",
+                name: "Head Office MIS/ Dash Board - HO",
+                path: "/employees/attendance",
+              },
+            ],
           },
           {
             id: "generalStoresEstate",
