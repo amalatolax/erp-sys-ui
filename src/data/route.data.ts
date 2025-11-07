@@ -6,6 +6,7 @@ export enum MainRoutes {
   employeeProfile = "/employees/:employeeId",
   leaveManagement = "/leaves-management",
   reports = "/reports",
+  dailyHarvestForm = "/daily-harvest-form",
   logout = MainRoutes.login,
 
   // Error Routes

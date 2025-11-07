@@ -7,7 +7,7 @@ export interface NavigationItem {
   name: string;
   icon: IconType | string;
   path: string;
-  children?: ChildrenType[]
+  children?: ChildrenType[];
   onClick?: () => void;
 }
 

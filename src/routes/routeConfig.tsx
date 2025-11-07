@@ -8,6 +8,7 @@ import Reports from "../pages/Reports/Reports";
 import Layout from "../Layout/Layout";
 import EmployeeProfilePage from "../pages/EmployeeProfile";
 import LoginPage from "../pages/Login";
+import DailyHarvestCreateForm from "../pages/Harvest";
 
 export const routes: RouteObject[] = [
   {
@@ -41,6 +42,10 @@ export const routes: RouteObject[] = [
       {
         path: MainRoutes.reports,
         element: <EmployeeProfilePage />,
+      },
+      {
+        path: MainRoutes.dailyHarvestForm,
+        element: <DailyHarvestCreateForm />,
       },
     ],
   },
